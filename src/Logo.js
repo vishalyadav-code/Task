@@ -1,23 +1,32 @@
 // import { logRoles } from '@testing-library/dom';
+import "./Logo.css";
 import React,{ useState } from 'react'
  function Logo(){
 
     const [logos, setlogos] = useState({
       list:[
-        'https://wpvip.com/wp-content/uploads/sites/3/2015/08/bigbite-vip.png',
-        'https://brandeps.com/logo-download/C/Circle-k-logo-vector-01.svg',
-        'https://www.mediainfoline.com/wp-content/uploads/2021/07/Mamypoko-Pants.jpg',
-        'https://1000logos.net/wp-content/uploads/2017/03/Kfc_logo-500x281.png'
-      ]
+          'https://www.neurointeractive.com/images/logo-circlek.png',
+          'https://www.neurointeractive.com/images/logo-bigbite.png',
+          'https://www.neurointeractive.com/images/logo-24seven.png',
+          'https://www.neurointeractive.com/images/logo-panasonic.png',
+          'https://www.neurointeractive.com/images/logo-whirlpool.png',
+          'https://www.neurointeractive.com/images/logo-mahindra.png',
+          'https://www.neurointeractive.com/images/logo-kfc.png',
+          'https://www.neurointeractive.com/images/logo-havells.png',
+          'https://www.neurointeractive.com/images/logo-pizzahut.png',
+          'https://www.neurointeractive.com/images/logo-mamypoko.png',
+          'https://www.neurointeractive.com/images/logo-sofy.png',
+          'https://www.neurointeractive.com/images/logo-nikon.png'
+         ]
     })
-    // console.log(logos)
+
     function renderItems(items){
         return(
             <div>
             {
-                items.forEach((item)=>{
+                items.map((item)=>{
                     return(
-                        <div>{item}</div>
+                        <img src={item} alt=".."/>
                         )
                     })
                 }
@@ -27,10 +36,13 @@ import React,{ useState } from 'react'
         
      return(
          <>
-         <h3>Some of Our Clients</h3> 
-         {renderItems(logos.list)}
+         <div className="LogoContainer">
+         <h3 className="client-heading"> Some of Our Clients</h3> 
+            <div className="logo-container">
+                {renderItems(logos.list)}
+            </div>
+         </div>
          </>
      );
-     
     }
  export default Logo;

@@ -1,9 +1,44 @@
 .main{
     display: flex;
     width: 70vw;
-    margin-left: 100px;
+    height: 5rem;
+}
+.col a {
+    text-decoration: none;
+    color: black;
+}
+.row {
+    width: 60%;
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    justify-content: space-between;
+}
+.col a {
+    text-decoration: none;
+    color: black;
+}
+.col {
+    width: 10%;
+    display: inline;
+    padding: 20px;
+    font-size: 15px;
+    text-decoration: none;
 }
 
+.container{
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.Logo{
+    width: 20%;
+    text-align: center;
+}
 
 ul li {
     list-style: none;
